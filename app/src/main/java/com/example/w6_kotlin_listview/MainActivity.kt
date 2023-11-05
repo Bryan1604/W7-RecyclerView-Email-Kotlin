@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     lateinit var customAdapter: CustomAdapter
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         customAdapter = CustomAdapter(this,list)
 
         //khai bao bien den listEmail
-        val listEmail = findViewById<ListView>(R.id.listEmail)
+        val listEmail = findViewById<RecyclerView>(R.id.listEmail)
         listEmail.adapter = customAdapter
     }
 }
